@@ -1,3 +1,12 @@
+@import './variables';
+@import './mixins';
+
+$theme-colors: (
+  'transparent': $transparent,
+  'primary': $primary,
+  'black': $black,
+  'white': $white,
+);
 @import '/node_modules/bootstrap/scss/functions';
 @import '/node_modules/bootstrap/scss/variables';
 

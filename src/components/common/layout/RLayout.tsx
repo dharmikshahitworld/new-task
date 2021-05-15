@@ -1,22 +1,34 @@
 import React, { FC } from 'react'
+import { useLocation } from 'react-router-dom'
+import {
+  SidebarContent,
+  ProSidebar,
+  SidebarHeader,
+  Menu,
+  MenuItem,
+} from 'react-pro-sidebar'
+
+import { RRow } from '../RRow'
 import { RCol } from '../RCol'
-import { RContainer } from '../RContainer'
+import { Sidebar } from 'components/sidebar/Sidebar'
+
+import { sidebarMenuItems } from 'utils/data'
+
+import './RLayout.scss'
 
 export const RLayout: FC<{}> = ({ children }) => {
   return (
     <div className='r-layout'>
-      <div className='content'>
-        <div className='main-header border'>Header</div>
-        <RContainer fluid className='border border-primary'>
-          <RCol xl={2} className='border'>
-            Sidebar
+      <div className='r-layout-content'>
+        <div className='main-header'>Header</div>
+        <RRow className='g-0'>
+          <RCol xl={3}>
+            <Sidebar />
           </RCol>
-          <RCol xl={12} className='border'>
-            {children}
-          </RCol>
-        </RContainer>
+          <RCol xl={21}>{children}</RCol>
+        </RRow>
       </div>
-      <div className='main-footer border'>footer</div>
+      <div className='main-footer'>footer</div>
     </div>
   )
 }

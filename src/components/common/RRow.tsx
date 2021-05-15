@@ -1,9 +1,9 @@
 import React, { FC } from 'react'
 import { Row, RowProps } from 'react-bootstrap'
 
-export const RRow: FC<RowProps> = ({ children, ...props }) => {
+export const RRow: FC<RowProps> = ({ className, children, ...props }) => {
   return (
-    <Row {...props} className='r-row'>
+    <Row {...props} className={`${className ? className : ''}`}>
       {children}
     </Row>
   )
