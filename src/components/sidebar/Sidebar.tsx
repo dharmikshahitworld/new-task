@@ -1,46 +1,42 @@
-import { RNavLink } from 'components/common/RNavLink'
-import React, { FC } from 'react'
-import { Nav, Navbar } from 'react-bootstrap'
-import { NavLink } from 'react-router-dom'
+import { FC } from 'react'
+import { RLink } from 'components/common/link/RLink'
+import {
+  Menu,
+  MenuItem,
+  ProSidebar,
+  SidebarContent,
+  SidebarHeader,
+} from 'react-pro-sidebar'
+import { useLocation } from 'react-router-dom'
+import { sidebarMenuItems } from 'utils/data'
 
-import { routePath } from 'utils/enums'
-import { menuItems } from 'utils/enums'
+import './Sidebar.scss'
 
 export const Sidebar: FC = () => {
-  const { toDashboard } = routePath
-  const {
-    dashboard,
-    widgets,
-    UIElements,
-    advanceUI,
-    formElements,
-    editors,
-    charts,
-    tables,
-    popups,
-    notification,
-    icons,
-    maps,
-    userPages,
-    errorPages,
-    generalPages,
-    ECommerce,
-    Email,
-    calendar,
-    todoList,
-    gallery,
-    documentation,
-  } = menuItems
+  let route = useLocation()
+  let currentRoute = route.pathname
   return (
-    <Navbar bg='primary' variant='dark'>
-      <Nav className='flex-column'>
-        <NavLink to={dashboard} exact component={RNavLink}>
-          Dashboard
-        </NavLink>
-        <NavLink to='/' component={RNavLink}>
-          Widgets
-        </NavLink>
-      </Nav>
-    </Navbar>
+    <ProSidebar>
+      <SidebarHeader className='text-center py-4'>
+        Sidebar Heading
+      </SidebarHeader>
+      <SidebarContent>
+        <Menu>
+          {sidebarMenuItems.map((sidebar) => {
+            const activePath = sidebar?.routesArray?.includes(currentRoute)
+            return (
+              <MenuItem
+                icon={sidebar?.icon}
+                key={sidebar?.key}
+                className={`${activePath ? 'active-item' : ''}`}
+              >
+                {sidebar.name}
+                <RLink to={sidebar?.path} />
+              </MenuItem>
+            )
+          })}
+        </Menu>
+      </SidebarContent>
+    </ProSidebar>
   )
 }

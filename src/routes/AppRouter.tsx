@@ -1,12 +1,10 @@
 import React from 'react'
-import Switch from 'react-bootstrap/esm/Switch'
-import { Route, Router } from 'react-router'
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 
 import { DashboardPage } from 'pages/dashboard/Dashboard'
 import { WidgetsPage } from 'pages/widgets/Widgets'
 
 import { routePath } from 'utils/enums'
-import history from './history'
 
 export const AppRouter = () => {
   const {
@@ -34,10 +32,29 @@ export const AppRouter = () => {
   } = routePath
 
   return (
-    <Router history={history}>
+    <Router>
       <Switch>
-        <Route path={toDashboard} exact component={DashboardPage} />
-        <Route path={toWidgets} exact component={WidgetsPage} />
+        <Route path={toDashboard} component={DashboardPage} exact />
+        <Route path={toWidgets} component={WidgetsPage} exact />
+        <Route path={toUIElements} component={DashboardPage} exact />
+        <Route path={toAdvanceUI} component={DashboardPage} exact />
+        <Route path={toFormElements} component={DashboardPage} exact />
+        <Route path={toEditors} component={DashboardPage} exact />
+        <Route path={toCharts} component={DashboardPage} exact />
+        <Route path={toTables} component={DashboardPage} exact />
+        <Route path={toPopups} component={DashboardPage} exact />
+        <Route path={toNotification} component={DashboardPage} exact />
+        <Route path={toIcons} component={DashboardPage} exact />
+        <Route path={toMaps} component={DashboardPage} exact />
+        <Route path={toUserPages} component={DashboardPage} exact />
+        <Route path={toErrorPages} component={DashboardPage} exact />
+        <Route path={toGeneralPages} component={DashboardPage} exact />
+        <Route path={toECommerce} component={DashboardPage} exact />
+        <Route path={toEMail} component={DashboardPage} exact />
+        <Route path={toCalendar} component={DashboardPage} exact />
+        <Route path={toTodoList} component={DashboardPage} exact />
+        <Route path={toGallery} component={DashboardPage} exact />
+        <Route path={toDocumentation} component={DashboardPage} exact />
       </Switch>
     </Router>
   )
