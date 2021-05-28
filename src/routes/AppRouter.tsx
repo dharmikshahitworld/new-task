@@ -1,8 +1,8 @@
 import React from 'react'
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 
-import { DashboardPage } from 'pages/dashboard/Dashboard'
-import { WidgetsPage } from 'pages/widgets/Widgets'
+import { DashboardPage } from 'pages/dashboard/DashboardPage'
+import { WidgetsPage } from 'pages/widgets/WidgetsPage'
 
 import { routePath } from 'utils/enums'
 

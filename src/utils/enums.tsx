@@ -22,7 +22,7 @@ export const routePath = {
   toDocumentation: '/documentation',
 }
 
-export enum menuItems  {
+export enum menuItems {
   dashboard = 'Dashboard',
   widgets = 'Widgets',
   UIElements = 'UI Elements',
@@ -44,4 +44,10 @@ export enum menuItems  {
   todoList = 'Todo List',
   gallery = 'Gallery',
   documentation = 'Documentation',
+}
+
+export enum status {
+  inProcess = 'Process',
+  open = 'Open',
+  onHold = 'On Hold',
 }

@@ -1,0 +1,15 @@
+@import '../../scss/variables';
+.recent-activities-card {
+  .icon-line {
+    border-right: 3px solid $light;
+    height: 40px;
+    position: absolute;
+    left: 33%;
+  }
+  .status-icon {
+    padding: 0.75rem;
+  }
+  .status {
+    padding-bottom: 2.5rem;
+  }
+}

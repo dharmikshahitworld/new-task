@@ -1,0 +1,44 @@
+@import '/node_modules/react-pro-sidebar/dist/scss/styles.scss';
+@import '../../scss/variables';
+
+.sidebar {
+  position: relative;
+  margin-left: 0;
+  transition: margin-left 0.3s ease;
+  .pro-sidebar {
+    .pro-sidebar-layout {
+      position: static;
+    }
+    .toggle {
+      position: absolute;
+      right: -3rem;
+      z-index: 1030;
+      display: flex;
+      padding: 1.3rem 0.5rem;
+    }
+    .pro-sidebar-header {
+      padding: 0.75rem 1rem;
+    }
+    .collapsed-header {
+      padding: 1.14rem 0 1.14rem 1rem;
+    }
+    .pro-sidebar-inner {
+      background: $primary;
+    }
+    .pro-sidebar-content {
+      .pro-menu-item {
+        border-left: 0.25rem solid $transparent;
+        &.active-item {
+          border-color: $orange;
+          color: $white;
+          font-weight: bold;
+        }
+      }
+      height: calc(100vh - 61px);
+    }
+  }
+
+  .scrollbar-container {
+    scroll-behavior: auto;
+  }
+}

@@ -1,6 +1,30 @@
-import { RiPlaneFill } from 'react-icons/ri'
+import {
+  FaBell,
+  FaBolt,
+  FaChartLine,
+  FaDiceD6,
+  FaHome,
+  FaIcons,
+  FaListUl,
+  FaMapMarkerAlt,
+  FaPhotoVideo,
+  FaPollH,
+  FaRegSquare,
+  FaShoppingCart,
+  FaSlackHash,
+  FaWpforms,
+} from 'react-icons/fa'
+import { SiGmail } from 'react-icons/si'
+import {
+  BsCalendar,
+  BsLayoutSidebarInset,
+  BsLayoutWtf,
+  BsTable,
+} from 'react-icons/bs'
+import { AiOutlineForm } from 'react-icons/ai'
+import { MdErrorOutline, MdPages } from 'react-icons/md'
 
-import { routePath, menuItems } from 'utils/enums'
+import { routePath, menuItems, status } from 'utils/enums'
 
 const {
   toDashboard,
@@ -52,7 +76,7 @@ const {
 export const sidebarMenuItems = [
   {
     key: 1,
-    icon: <RiPlaneFill />,
+    icon: <FaHome />,
     path: toDashboard,
     name: dashboard,
     routesArray: [toDashboard],
@@ -61,7 +85,7 @@ export const sidebarMenuItems = [
   },
   {
     key: 2,
-    icon: <RiPlaneFill />,
+    icon: <FaDiceD6 />,
     path: toWidgets,
     name: widgets,
     routesArray: [toWidgets],
@@ -70,7 +94,7 @@ export const sidebarMenuItems = [
   },
   {
     key: 3,
-    icon: <RiPlaneFill />,
+    icon: <BsLayoutSidebarInset />,
     path: toUIElements,
     name: UIElements,
     routesArray: [toUIElements],
@@ -79,7 +103,7 @@ export const sidebarMenuItems = [
   },
   {
     key: 4,
-    icon: <RiPlaneFill />,
+    icon: <BsLayoutWtf />,
     path: toAdvanceUI,
     name: advanceUI,
     routesArray: [toAdvanceUI],
@@ -88,16 +112,7 @@ export const sidebarMenuItems = [
   },
   {
     key: 5,
-    icon: <RiPlaneFill />,
-    path: toFormElements,
-    name: formElements,
-    routesArray: [toFormElements],
-    selected: true,
-    subMenu: [],
-  },
-  {
-    key: 5,
-    icon: <RiPlaneFill />,
+    icon: <FaWpforms />,
     path: toFormElements,
     name: formElements,
     routesArray: [toFormElements],
@@ -106,7 +121,7 @@ export const sidebarMenuItems = [
   },
   {
     key: 6,
-    icon: <RiPlaneFill />,
+    icon: <AiOutlineForm />,
     path: toEditors,
     name: editors,
     routesArray: [toEditors],
@@ -115,7 +130,7 @@ export const sidebarMenuItems = [
   },
   {
     key: 7,
-    icon: <RiPlaneFill />,
+    icon: <FaChartLine />,
     path: toCharts,
     name: charts,
     routesArray: [toCharts],
@@ -124,7 +139,7 @@ export const sidebarMenuItems = [
   },
   {
     key: 8,
-    icon: <RiPlaneFill />,
+    icon: <BsTable />,
     path: toTables,
     name: tables,
     routesArray: [toTables],
@@ -133,7 +148,7 @@ export const sidebarMenuItems = [
   },
   {
     key: 9,
-    icon: <RiPlaneFill />,
+    icon: <FaRegSquare />,
     path: toPopups,
     name: popups,
     routesArray: [toPopups],
@@ -142,7 +157,7 @@ export const sidebarMenuItems = [
   },
   {
     key: 10,
-    icon: <RiPlaneFill />,
+    icon: <FaBell />,
     path: toNotification,
     name: notification,
     routesArray: [toNotification],
@@ -151,7 +166,7 @@ export const sidebarMenuItems = [
   },
   {
     key: 11,
-    icon: <RiPlaneFill />,
+    icon: <FaIcons />,
     path: toIcons,
     name: icons,
     routesArray: [toIcons],
@@ -160,7 +175,7 @@ export const sidebarMenuItems = [
   },
   {
     key: 12,
-    icon: <RiPlaneFill />,
+    icon: <FaMapMarkerAlt />,
     path: toMaps,
     name: maps,
     routesArray: [toMaps],
@@ -169,7 +184,7 @@ export const sidebarMenuItems = [
   },
   {
     key: 13,
-    icon: <RiPlaneFill />,
+    icon: <MdPages />,
     path: toUserPages,
     name: userPages,
     routesArray: [toUserPages],
@@ -178,7 +193,7 @@ export const sidebarMenuItems = [
   },
   {
     key: 14,
-    icon: <RiPlaneFill />,
+    icon: <MdErrorOutline />,
     path: toErrorPages,
     name: errorPages,
     routesArray: [toErrorPages],
@@ -187,7 +202,7 @@ export const sidebarMenuItems = [
   },
   {
     key: 15,
-    icon: <RiPlaneFill />,
+    icon: <FaSlackHash />,
     path: toGeneralPages,
     name: generalPages,
     routesArray: [toGeneralPages],
@@ -196,7 +211,7 @@ export const sidebarMenuItems = [
   },
   {
     key: 16,
-    icon: <RiPlaneFill />,
+    icon: <FaShoppingCart />,
     path: toECommerce,
     name: ECommerce,
     routesArray: [toECommerce],
@@ -205,7 +220,7 @@ export const sidebarMenuItems = [
   },
   {
     key: 17,
-    icon: <RiPlaneFill />,
+    icon: <SiGmail />,
     path: toEMail,
     name: Email,
     routesArray: [toEMail],
@@ -214,7 +229,7 @@ export const sidebarMenuItems = [
   },
   {
     key: 18,
-    icon: <RiPlaneFill />,
+    icon: <BsCalendar />,
     path: toCalendar,
     name: calendar,
     routesArray: [toCalendar],
@@ -223,7 +238,7 @@ export const sidebarMenuItems = [
   },
   {
     key: 19,
-    icon: <RiPlaneFill />,
+    icon: <FaListUl />,
     path: toTodoList,
     name: todoList,
     routesArray: [toTodoList],
@@ -232,7 +247,7 @@ export const sidebarMenuItems = [
   },
   {
     key: 20,
-    icon: <RiPlaneFill />,
+    icon: <FaPhotoVideo />,
     path: toGallery,
     name: gallery,
     routesArray: [toGallery],
@@ -241,11 +256,137 @@ export const sidebarMenuItems = [
   },
   {
     key: 21,
-    icon: <RiPlaneFill />,
+    icon: <FaPollH />,
     path: toDocumentation,
     name: documentation,
     routesArray: [toDocumentation],
     selected: true,
     subMenu: [],
+  },
+]
+
+export const dummyActivities = [
+  {
+    id: 1,
+    recent: '42 mins ago',
+    icon: (
+      <FaListUl className='rounded-circle fs-1 me-3 status-icon bg-orange text-white' />
+    ),
+    title: 'Task Updated',
+    name: 'Dharmik',
+    status: 'Updated a Task',
+  },
+  {
+    id: 2,
+    recent: '1 day ago',
+    icon: (
+      <FaBolt className='rounded-circle fs-1 me-3 status-icon bg-info text-white' />
+    ),
+    title: 'Deal Added',
+    name: 'Panshi',
+    status: 'Updated a Task',
+  },
+  {
+    id: 3,
+    recent: '42 minutes ago',
+    icon: (
+      <FaBolt className='rounded-circle fs-1 me-3 status-icon bg-info text-white' />
+    ),
+    title: 'Published Article',
+    name: 'Rasel',
+    status: 'Updated a Task',
+  },
+  {
+    id: 4,
+    recent: '1 day ago',
+    icon: (
+      <FaBolt className='rounded-circle fs-1 me-3 status-icon bg-info text-white' />
+    ),
+    title: 'Dock Updated',
+    name: 'Reshmi',
+    status: 'Updated a Dock',
+  },
+  {
+    id: 5,
+    recent: '1 day ago',
+    icon: (
+      <FaBolt className='rounded-circle fs-1 me-3 status-icon bg-info text-white' />
+    ),
+    title: 'Replayed Comment',
+    name: 'Jenathon',
+    status: 'Added a Comment',
+  },
+]
+
+export const dummyTableData = [
+  {
+    id: 1,
+    invoice: 12386,
+    customers: 'Dharmik Shah',
+    from: 'India',
+    price: '$462',
+    status: status.inProcess,
+  },
+  {
+    id: 2,
+    invoice: 12386,
+    customers: 'Mark Zuckerberg',
+    from: 'USA',
+    price: '$2995',
+    status: status.open,
+  },
+  {
+    id: 3,
+    invoice: 12386,
+    customers: 'Marko',
+    from: 'Brazil',
+    price: '$299',
+    status: status.onHold,
+  },
+  {
+    id: 4,
+    invoice: 12386,
+    customers: 'Bill Gates',
+    from: 'Pakistan',
+    price: '$30',
+    status: status.inProcess,
+  },
+  {
+    id: 5,
+    invoice: 12386,
+    customers: 'Mr Incredible',
+    from: 'Russia',
+    price: '$956',
+    status: status.open,
+  },
+]
+export const dummyStatusData = [
+  {
+    id: 1,
+    title: 'Revinue Status',
+    amount: '',
+    withDropdown: false,
+    variant: 'info',
+  },
+  {
+    id: 2,
+    title: 'Page View',
+    amount: '',
+    withDropdown: false,
+    variant: 'warning',
+  },
+  {
+    id: 1,
+    title: 'Bounce Rate',
+    amount: '',
+    withDropdown: false,
+    variant: 'orange',
+  },
+  {
+    id: 1,
+    title: 'Revinue Status',
+    amount: '',
+    withDropdown: false,
+    variant: 'primary',
   },
 ]

@@ -1,0 +1,27 @@
+@import '../../scss/variables';
+.main-chart {
+  .nav-tabs {
+    .nav-item {
+      padding: 0 0 0.5rem 0;
+      .nav-link {
+        padding: 0 0.5rem 0.2rem;
+        font-size: 14px;
+        color: $secondary;
+        border: none;
+        border-bottom: 3px solid $transparent;
+        font-weight: 500;
+        &.active {
+          transition: 0.5s ease;
+          color: $primary;
+          border-color: $orange;
+        }
+      }
+    }
+  }
+  .tab-content {
+    height: inherit;
+    .tab-pane {
+      height: 305px;
+    }
+  }
+}

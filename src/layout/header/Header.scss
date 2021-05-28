@@ -1,0 +1,19 @@
+@import '../../scss/variables';
+.header {
+  .custom-badge {
+    position: absolute;
+    font-size: 11px;
+    top: -25%;
+    right: -30%;
+    background: $hotpink;
+    width: 18px;
+    height: 18px;
+    color: $white;
+    border-radius: 50rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid $white;
+  }
+}

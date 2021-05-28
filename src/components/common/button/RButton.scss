@@ -1,0 +1,11 @@
+@import '../../../scss/variables';
+body {
+  .r-button {
+    &.btn-info,
+    &.btn-success,
+    &.btn-danger,
+    &.btn-orange {
+      color: $white;
+    }
+  }
+}

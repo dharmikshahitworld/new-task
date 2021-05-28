@@ -1,5 +1,7 @@
 import { FC } from 'react'
-import { Sidebar } from 'components/sidebar/Sidebar'
+
+import { Sidebar } from 'layout/sidebar/Sidebar'
+import { Header } from './header/Header'
 
 import './RLayout.scss'
 
@@ -9,13 +11,12 @@ export const RLayout: FC<{}> = ({ children }) => {
       <div className='r-layout-content'>
         <div className='d-flex'>
           <Sidebar />
-          <div>
-            <div className='main-header'>Header</div>
+          <div className='bg-light w-100'>
+            <Header />
             {children}
           </div>
         </div>
       </div>
-      <div className='main-footer'>footer</div>
     </div>
   )
 }
